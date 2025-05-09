@@ -15,6 +15,7 @@ from datetime import date
 
 
 def main():
+    # Input file path
     filepath = 'json_program1.json'
 
     with open(filepath, 'r') as file:
@@ -22,10 +23,13 @@ def main():
 
 
     minors = []
+
+    # for each person in file, check if the age is less than 18
     for person in data:
         person_birthdate = date.fromisoformat(person['birth_date'])
         age = (date.today() - person_birthdate).days // 365
 
+        # if age is less than 18, the person is a minor
         if age < 18:
             print("***********")
             print(f"Name: {person['name']}")
@@ -36,6 +40,7 @@ def main():
             person["age"] = age
             minors.append(person)
 
+        # stores into json file for further verification
         with open("minors.json", 'w') as file:
             json.dump(minors, file, indent=4)
 
