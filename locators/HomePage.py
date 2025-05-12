@@ -48,19 +48,23 @@ class HomePage:
         sorter.click()
 
     def open_latest_job(self):
-        # get the ul list of job items
+        # Wait for the link to be clickable
         job_ul = WebDriverWait(self.driver, 10).until(
-            ec.visibility_of_element_located((By.CLASS_NAME, "search-result__list"))
+            ec.presence_of_element_located((By.CLASS_NAME, "search-result__list"))
         )
 
-        self.driver.execute_script("arguments[0].scrollIntoView({behaviour: 'smooth', block:'center'});", job_ul)
-
-        job_li = job_ul.find_elements(By.TAG_NAME, "li")
-
-        job_link = WebDriverWait(job_li[0], 10).until(
-            ec.presence_of_element_located((By.TAG_NAME, "a"))
+        job_list = WebDriverWait(job_ul, 10).until(
+            ec.presence_of_all_elements_located((By.TAG_NAME, "li"))
         )
 
-        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", job_link)
+        link_div = job_list[0].find_element(By.CLASS_NAME, "search-result__item-controls")
 
-        # job_link.click()
+        # self.driver.execute_script("arguments[0].scrollIntoView({behaviour: 'smooth', block: 'center'});", link_div)
+
+        apply_link = link_div.find_element(By.TAG_NAME, "a")
+
+        apply_link.click()
+
+    def keyword_in_page(self, keyword):
+        body = self.driver.find_element(By.TAG_NAME, "body")
+        return True if keyword in body.text else False
