@@ -40,9 +40,9 @@ class HomePage:
             ec.presence_of_all_elements_located(Locators.JOB_LIST)
         )
 
-        link_div = job_list[0].find_element(*Locators.JOB_APPLY_LINK_WRAPPER)
+        apply_link = job_list[0].find_element(*Locators.JOB_APPLY_LINK)
 
-        apply_link = link_div.find_element(*Locators.LINK_TAG)
+        sleep(1)
 
         apply_link.click()
 
@@ -50,7 +50,7 @@ class HomePage:
         body = WebDriverWait(self.driver, 10).until(
             ec.presence_of_element_located(Locators.PAGE_BODY)
         )
-        sleep(1)
+        sleep(2)
         return True if keyword in body.text else False
 
     def click_search_icon(self):
