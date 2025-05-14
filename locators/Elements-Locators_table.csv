@@ -1,0 +1,14 @@
+Element,Locator Type,Locator Value
+CAREERS_LINK,link text,Careers
+FIND_BUTTON,xpath,//button[contains(text(), 'Find')]
+JOB_APPLY_LINK,partial link text,VIEW AND
+JOB_LIST,tag name,li
+JOB_LIST_WRAPPER,class name,search-result__list
+KEYWORDS_INPUT,id,new_form_job_search-keyword
+LOCATION_ARROW,class name,select2-selection__arrow
+PAGE_BODY,tag name,body
+REMOTE_CHECKBOX,css selector,label[for='id-93414a92-598f-316d-b965-9eb0dfefa42d-remote']
+SEARCH_FIND_BUTTON,xpath,//button[contains(@class, 'custom-button') and contains(@class, 'uppercase-text')]
+SEARCH_ICON,xpath,//button[contains(@class, 'header-search__button')]
+SEARCH_INPUT,name,q
+SELECT_ALL_LOCATIONS,xpath,//li[@title='All Locations']
