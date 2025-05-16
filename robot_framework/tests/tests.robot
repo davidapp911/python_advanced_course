@@ -19,4 +19,5 @@ Add Monitor To Cart
     Click Login Button
     Enter Credentials And Submit    ${USERNAME}    ${PASSWORD}
     Click Monitor Category
-    Add Expensive Monitor
+    ${monitor_name}=    Add Most Expensive Monitor To Cart
+    Check Cart    ${monitor_name}
