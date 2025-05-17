@@ -21,3 +21,4 @@ Add Monitor To Cart
     Click Monitor Category
     ${monitor_name}=    Add Most Expensive Monitor To Cart
     Check Cart    ${monitor_name}
+    Close Browser
