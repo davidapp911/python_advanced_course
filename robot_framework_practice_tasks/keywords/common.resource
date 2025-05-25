@@ -60,7 +60,7 @@ Scroll To By Class
     Wait Until Element Is Enabled    class:${class}
     Scroll Element Into View    class:${class}
     
-Search For Keyword In Body
+Validate Keyword In Page Body
     [Documentation]    Search for the presence of a given keyword anywhere in the page
     [Arguments]    ${keyword}
     Wait Until Element Is Visible    xpath://body
