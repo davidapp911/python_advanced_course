@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../keywords/locator.resource
-Resource    ../variables/locator.resource
 
 *** Test Cases ***
 Job Search Based on Keywords
