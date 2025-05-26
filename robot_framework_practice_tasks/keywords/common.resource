@@ -42,6 +42,12 @@ Click Element By Title
     [Arguments]    ${title}
     Wait Until Element Is Visible    //li[@title='${title}']
     Click Element    //li[@title='${title}']
+    
+Click Element By Id
+    [Documentation]    Clicks on Webelement that contains a given id
+    [Arguments]    ${id}
+    Wait Until Element Is Visible    id:${id}
+    Click Element    id:${id}
 
 Click Label With For Attribute
     [Documentation]    Clicks on a label Webelement that contains a given for attribute
