@@ -64,6 +64,7 @@ Validate Keyword In Page Body
     [Documentation]    Search for the presence of a given keyword anywhere in the page
     [Arguments]    ${keyword}
     Wait Until Element Is Visible    xpath://body
+    Sleep    1s
     ${body_text}=    Get Text        xpath=//body
     
     Should Match Regexp    ${body_text}    (?i).*${keyword}.*

@@ -4,7 +4,7 @@ Resource    ../keywords/locator.resource
 
 *** Test Cases ***
 Job Search Based on Keywords
-    FOR    ${keyword}    IN    @{career_terms}
+    FOR    ${keyword}    IN    @{JOB_TERMS}
         Navigate To EPAM
         Go To Careers Page
         Set Job Preferences    ${keyword}
@@ -16,7 +16,7 @@ Job Search Based on Keywords
     [Teardown]    
 
 Global Search Validation
-    FOR    ${keyword}    IN    @{search_terms}
+    FOR    ${keyword}    IN    @{SEARCH_TERMS}
         Navigate To EPAM
         Click Magnifier Glass
         Search For Posts Related To    ${keyword}
