@@ -8,3 +8,4 @@ ${PRODUCTS_HEAD_ID}    contents_wrapper
 ${PRODUCTS_PAGE_TITLE_CLASS}    title
 ${ERROR_DATA_TEST}    error
 ${ERROR_TEXT}    Epic sadface
+${CART_BUTTON_TEXT}    Add to cart

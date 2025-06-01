@@ -21,3 +21,9 @@ Test Login Correct Messages
         Close Browser
     END
     [Teardown]
+    
+Test Shopping Cart Functionality
+    Navigate To Saucedemo
+    Login User
+    Validate Navigation To Products Page
+    Add Items To Cart

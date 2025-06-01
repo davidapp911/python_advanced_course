@@ -74,3 +74,9 @@ Validate Keyword In Page Body
     ${body_text}=    Get Text        xpath=//body
     
     Should Match Regexp    ${body_text}    (?i).*${keyword}.*
+
+Get Buttons List
+    [Documentation]    Returns a list of buttons with a given text
+    [Arguments]    ${text}
+    @{button_list}=    Get Webelements    xpath://button[contains(text(), '${text}')]
+    Return From Keyword    @{button_list}
